@@ -11,7 +11,6 @@ function Home() {
         const response = await fetch("https://api.spacexdata.com/v3/info")
         const data = await response.json();
         setInfo(data);
-        console.log(data.headquarters.city);
       };
       fetchInfo();
     },
@@ -23,6 +22,11 @@ function Home() {
         <ul>
           <h2>{info.name}</h2>
           <p>{info.summary}</p>
+          <p>{info.cto}</p>
+          {/* <p>{info.headquarters['city']}</p> */}
+          {/* <p>{info.headquarters["address"]}</p> */}
+          {/* <p>{info.links["address"]}</p> */}
+          {/* <p>{info.links}</p> */}
           {/* <Link to = {info.links.website}>Websites</Link> */}
           {/* <p>{info.headquarters.city}</p> */}
           

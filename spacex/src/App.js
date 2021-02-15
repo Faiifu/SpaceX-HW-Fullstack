@@ -10,12 +10,15 @@ import Home from "./Pages/Home/Home"
 import Rocket from "./Pages/Rocket/Rocket"
 import Launch from "./Pages/Launch/Launch"
 
+import Nav from "./components/nav/Nav"
+
 import './App.css';
 
 export default function BasicExample() {
   return (
     <Router>
       <div>
+        <Nav></Nav>
         <ul className="show-list">
           <li>
             <Link to="/">Home</Link>
