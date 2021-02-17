@@ -4,6 +4,7 @@ import {
   Link
 } from "react-router-dom";
 
+
 function Home() {
     const [info, setInfo] = useState([]);
     useEffect(() => {
@@ -18,11 +19,16 @@ function Home() {
     );
     return (
       <div>
-        <h2>Home</h2>
+        <h2 className="text-blue-400">Home</h2>
         <ul>
-          <h2>{info.name}</h2>
+          <h2 className="text-red-400">{info.name}</h2>
           <p>{info.summary}</p>
           <p>{info.cto}</p>
+          {info.links &&
+            <>
+              <p className="p-12">{info.links.website}</p>
+            </>
+          }
           {/* <p>{info.headquarters['city']}</p> */}
           {/* <p>{info.headquarters["address"]}</p> */}
           {/* <p>{info.links["address"]}</p> */}
