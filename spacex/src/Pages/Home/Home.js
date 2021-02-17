@@ -29,12 +29,6 @@ function Home() {
               <p className="p-12">{info.links.website}</p>
             </>
           }
-          {/* <p>{info.headquarters['city']}</p> */}
-          {/* <p>{info.headquarters["address"]}</p> */}
-          {/* <p>{info.links["address"]}</p> */}
-          {/* <p>{info.links}</p> */}
-          {/* <Link to = {info.links.website}>Websites</Link> */}
-          {/* <p>{info.headquarters.city}</p> */}
           
         </ul>
       </div>

@@ -19,18 +19,6 @@ export default function BasicExample() {
     <Router>
       <div>
         <Nav></Nav>
-        <ul className="show-list">
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/Rocket">Rocket</Link>
-          </li>
-          <li>
-            <Link to="/Launch">Launch</Link>
-          </li>
-        </ul>
-
         <hr />
     
         <Switch>
