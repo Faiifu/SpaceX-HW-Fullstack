@@ -1,17 +1,28 @@
 import React, { useState, useEffect} from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch
+} from "react-router-dom";
+import RocketDetail from '../RocketDetail/RocketDetail';
+
 
 function Rocket() {
-  const [rockets, setrockets] = useState([]);
+  
+  const [rockets, setRockets] = useState([]);
     useEffect(() => {
       const fetchrockets = async () => {
         const response = await fetch("https://api.spacexdata.com/v3/rockets")
         const data = await response.json();
-        setrockets(data);
+        setRockets(data);
       };
       fetchrockets();
     },
     [],
     );
+    let {path,url} = useRouteMatch()
     return (
       <div>
         <div>
@@ -26,14 +37,15 @@ function Rocket() {
                 <h2 className="text-xl font-bold">{rocket.rocket_name}</h2>
                 <p>{rocket.description}</p>
                 <div className="flex flex-row justify-end">
-                <button className="border-2 p-2 hover:bg-gray-400">View details</button>
-                </div>
-                
+                  <Link to={`${url}/RocketDetail/${rocket.rocket_id}`}><button className="border-2 p-2 hover:bg-gray-400">View details</button></Link>
+                </div>  
               </div>
-            </div>  
+            </div>
           </div>
+          
           ))}
         </div>
+        
       </div>
     );
   }

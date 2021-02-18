@@ -9,6 +9,7 @@ import {
 import Home from "./Pages/Home/Home"
 import Rocket from "./Pages/Rocket/Rocket"
 import Launch from "./Pages/Launch/Launch"
+import RocketDetail from "./Pages/RocketDetail/RocketDetail"
 
 import Nav from "./components/nav/Nav"
 
@@ -20,10 +21,13 @@ export default function BasicExample() {
       <div>
         <Nav></Nav>
         <hr />
-    
         <Switch>
+          
           <Route exact path="/">
             <Home />
+          </Route>
+          <Route path="/Rocket/RocketDetail/:rocketId">
+            <RocketDetail />
           </Route>
           <Route path="/Rocket">
             <Rocket />
