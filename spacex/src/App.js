@@ -22,7 +22,6 @@ export default function BasicExample() {
     <Router>
       <div>
         <Nav></Nav>
-        <hr />
         <Switch>
           <Route exact path="/">
             <Home />

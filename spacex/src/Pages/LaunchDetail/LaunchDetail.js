@@ -25,7 +25,8 @@ function LaunchDetail (){
   );
     return(
         <div>
-            <p>{flight.mission_name}</p>
+            <video src={`www.youtube.com/embed/${flight.links.youtube_id}`} width="420" height="320"></video>
+
         </div>
     )
 }

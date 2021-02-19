@@ -39,10 +39,10 @@ function Launch() {
           </div>
         </div>
         <div className="container grid grid-cols-12 bg-yellow-400 justify-center text-center px-32">
-          <p className="col-span-3 mx-2 text-xl py-4 text-white font-bold">Name</p>
           <p className="col-span-3 mx-2 text-xl py-4 text-white font-bold">Launch Year</p>
-          <p className="col-span-3 mx-2 text-xl py-4 text-white font-bold">Success</p>
+          <p className="col-span-3 mx-2 text-xl py-4 text-white font-bold">Name</p>
           <p className="col-span-3 mx-2 text-xl py-4 text-white font-bold">Description</p>
+          <p className="col-span-3 mx-2 text-xl py-4 text-white font-bold">Success</p>
         </div>
         {launches.map((mission)=>(
           <>
@@ -50,19 +50,19 @@ function Launch() {
             ?
             <Link to={`${url}/LaunchDetail/${mission.flight_number}`}>
             <div className="container grid grid-cols-12 bg-yellow-50 justify-center text-center items-center px-32 cursor-pointer hover:bg-yellow-100">
-              <p className="col-span-3 mx-2 text-s py-4">{mission.mission_name}</p>
               <p className="col-span-3 mx-2 text-s py-4">{mission.launch_year}</p>
-              <p className="col-span-3 mx-2 text-s py-4">{mission.launch_success?<p className="text-green-600">Success</p>:<p className="text-red-600">Fail</p>}</p>
+              <p className="col-span-3 mx-2 text-s py-4">{mission.mission_name}</p>
               <p className="col-span-3 mx-2 text-s py-4">{mission.details}</p>
+              <p className="col-span-3 mx-2 text-s py-4">{mission.launch_success?<p className="text-green-600">Success</p>:<p className="text-red-600">Fail</p>}</p>
             </div>
             </Link>
             :
             <Link to={`${url}/LaunchDetail/${mission.flight_number}`}>
             <div className="container grid grid-cols-12 bg-gray-200 justify-center text-center items-center px-32 cursor-pointer hover:bg-gray-300">
-              <p className="col-span-3 mx-2 text-s py-4">{mission.mission_name}</p>
               <p className="col-span-3 mx-2 text-s py-4">{mission.launch_year}</p>
-              <p className="col-span-3 mx-2 text-s py-4">{mission.launch_success?<p className="text-green-600">Success</p>:<p className="text-red-600">Fail</p>}</p>
+              <p className="col-span-3 mx-2 text-s py-4">{mission.mission_name}</p>
               <p className="col-span-3 mx-2 text-s py-4">{mission.details}</p>
+              <p className="col-span-3 mx-2 text-s py-4">{mission.launch_success?<p className="text-green-600">Success</p>:<p className="text-red-600">Fail</p>}</p>
             </div>
             </Link>
             
