@@ -17,6 +17,7 @@ function Rocket() {
         const response = await fetch("https://api.spacexdata.com/v3/rockets")
         const data = await response.json();
         setRockets(data);
+        console.log(data)
       };
       fetchrockets();
     },
