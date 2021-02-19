@@ -1,0 +1,13 @@
+:root {
+    --background1a : black;
+    --background2a : #EEEEEE;
+    --color1 : #FFC300;
+}
+
+.bg-home {
+    background-color: var(--background1a);
+}
+
+.img-main {
+    height: 92vh;
+}

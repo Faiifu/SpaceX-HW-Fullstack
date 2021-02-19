@@ -14,6 +14,7 @@ import RocketDetail from "./Pages/RocketDetail/RocketDetail"
 import Nav from "./components/nav/Nav"
 
 import './App.css';
+
   
 export default function BasicExample() {
   return (
