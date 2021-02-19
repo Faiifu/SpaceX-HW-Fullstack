@@ -11,3 +11,9 @@
 .img-main {
     height: 92vh;
 }
+
+footer {
+    background-color: var(--background2a);
+    height: 17vh;
+}
+
