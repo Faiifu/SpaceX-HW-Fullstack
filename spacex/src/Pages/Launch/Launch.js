@@ -26,16 +26,22 @@ function Launch() {
       <div>
         <div className="flex flex-col items-center justify-center justify-items-center h-64 bg-black px-32">
           <h1 className="underline text-5xl text-white">Launches List</h1>
-          <div className="pt-16 text-sm">
-              <select className="mx-4" name="" id="" >
-                <option value="">Some Launches</option>
-              </select>
-              <select className="mx-4" name="" id="" >
-                <option value="">10-10-2020</option>
-              </select>
-              <select className="mx-4" name="" id="" >
-                <option value="">true</option>
-              </select>
+          <div className="pt-16 text-m flex flex-row">
+              <div className="">
+                <select className="mx-8 cursor-pointer px-4 py-2" name="" id="" >
+                  <option value="">Some Launches</option>
+                </select>
+              </div>
+              <div className="border-solid">
+                <select className="mx-8 cursor-pointer px-4 py-2" name="" id="" >
+                  <option value="">10-10-2020</option>
+                </select>
+              </div>
+              <div className="border-solid">
+                <select className="mx-8 cursor-pointer px-4 py-2" name="" id="" >
+                  <option value="">true</option>
+                </select>
+              </div>
           </div>
         </div>
         <div className="container grid grid-cols-12 bg-yellow-400 justify-center text-center px-32">

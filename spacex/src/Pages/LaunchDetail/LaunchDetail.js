@@ -23,7 +23,6 @@ function LaunchDetail (){
   },
   [],
   );
-  
   const opts = {
     height: '390',
     width: '640',
@@ -45,18 +44,40 @@ function LaunchDetail (){
                 </>
                 }
             </div>
-            <div className="flex flex-col items-center py-12 bg-black text-white">
+            <div className="grid grid-cols-12 py-12 bg-black text-white px-40">
             {flight.links &&
-                <>
-                    <img src={flight.links.mission_patch} alt="" className="h-60 w-60"/>
-                    <p className="pt-2 text-xl">Mission</p>
-                    <p className="pt-2 text-4xl">{flight.mission_name}</p>
-                    <div className="flex flex-row items-center pt-4">
-                      <a className="mx-8 border border-yellow-400 px-8 py-2 hover:bg-white hover:text-black cursor-pointer" href={flight.links.article_link} target="_blank">Article</a>
-                      <a className="mx-8 border border-yellow-400 px-8 py-2 hover:bg-white hover:text-black cursor-pointer" href={flight.links.wikipedia} target="_blank">Wikipedia</a>
+            <>
+                  <div className="flex flex-col col-span-6 mx-12 items-center ">
+                      <img src={flight.links.mission_patch} alt="" className="h-60 w-60"/>
+                      <p className="pt-2 text-xl">Mission</p>
+                      <p className="pt-2 text-4xl">{flight.mission_name}</p>
+                      <div className="flex flex-row items-center pt-4">
+                        <a className="mx-8 py-2 underline cursor-pointer" href={flight.links.article_link}>Article</a>
+                        <a className="mx-8 py-2 underline cursor-pointer" href={flight.links.wikipedia}>Wikipedia</a>
+                      </div>
                     </div>
-                </>
-                }
+
+                    <div className="col-span-6 mx-12 flex flex-col text-xl">
+                      <p className="text-yellow-400">Rocket Name</p>
+                      <p>{flight.rocket.rocket_name}</p>
+                      <p className="text-yellow-400 mt-2">Launch Time (UTC)</p>
+                      <p>{flight.launch_date_utc}</p>
+                      <p className="text-yellow-400 mt-2">Rocket Type</p>
+                      <p>{flight.rocket.rocket_type}</p>
+                      <p className="text-yellow-400 mt-2">Launch Site</p>
+                      <p>{flight.launch_site.site_name_long}</p>
+                      <p className="text-yellow-400 mt-2">Launch Success</p>
+                      {flight.launch_success?<p className="text-green-400">Success</p>:<p className="text-red-400">Fail</p>}
+                      <Link to={`/Rocket/RocketDetail/${flight.rocket.rocket_id}`} className="flex flex-col">
+                        <button className="border-2 border-yellow-400 hover:bg-yellow-400 hover:text-black self-center py-2 px-4 cursor-pointer">Rocket Detail -{'>'}</button>
+                      </Link>
+                      
+
+                    </div>
+              </>
+                  }
+              
+              
             </div>
         </div>
     )

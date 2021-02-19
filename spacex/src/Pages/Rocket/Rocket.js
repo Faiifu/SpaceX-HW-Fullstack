@@ -63,7 +63,7 @@ function Rocket() {
                       <img src={rocket.flickr_images[0]} className="w-72 h-72 rounded-full"></img>
                     </div>
                     <div className="flex flex-row text-white">
-                      <Link to={`${url}/RocketDetail/${rocket.rocket_id}`}><button className="border-2 p-2 hover:bg-gray-400">View details</button></Link>
+                      <Link to={`${url}/RocketDetail/${rocket.rocket_id}`}><button className="border-2 py-2 px-2 hover:bg-gray-400">View details</button></Link>
                     </div>  
                   </div>
                 </div>
