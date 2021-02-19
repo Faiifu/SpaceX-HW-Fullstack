@@ -10,6 +10,7 @@ import Home from "./Pages/Home/Home"
 import Rocket from "./Pages/Rocket/Rocket"
 import Launch from "./Pages/Launch/Launch"
 import RocketDetail from "./Pages/RocketDetail/RocketDetail"
+import LaunchDetail from './Pages/LaunchDetail/LaunchDetail'
 
 import Nav from "./components/nav/Nav"
 
@@ -23,7 +24,6 @@ export default function BasicExample() {
         <Nav></Nav>
         <hr />
         <Switch>
-          
           <Route exact path="/">
             <Home />
           </Route>
@@ -32,6 +32,9 @@ export default function BasicExample() {
           </Route>
           <Route path="/Rocket">
             <Rocket />
+          </Route>
+          <Route path="/Launch/LaunchDetail/:missionId">
+            <LaunchDetail />
           </Route>
           <Route path="/Launch">
             <Launch />

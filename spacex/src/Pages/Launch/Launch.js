@@ -1,4 +1,11 @@
 import React, { useState, useEffect} from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch
+} from "react-router-dom";
 
 function Launch() {
   const [launches, setLaunches] = useState([]);
@@ -14,9 +21,7 @@ function Launch() {
   },
   [],
   );
-  const plusCount = () => {
-    setCount(count + 1)
-  }
+  let {path,url} = useRouteMatch()
     return (
       <div>
         <div className="flex flex-col items-center justify-center justify-items-center h-64 bg-black px-32">
@@ -43,19 +48,23 @@ function Launch() {
           <>
           {mission.flight_number %2 == 0
             ?
-            <div className="container grid grid-cols-12 bg-yellow-50 justify-center text-center items-center px-32">
+            <Link to={`${url}/LaunchDetail/${mission.flight_number}`}>
+            <div className="container grid grid-cols-12 bg-yellow-50 justify-center text-center items-center px-32 cursor-pointer hover:bg-yellow-100">
               <p className="col-span-3 mx-2 text-s py-4">{mission.mission_name}</p>
               <p className="col-span-3 mx-2 text-s py-4">{mission.launch_year}</p>
               <p className="col-span-3 mx-2 text-s py-4">{mission.launch_success?<p className="text-green-600">Success</p>:<p className="text-red-600">Fail</p>}</p>
               <p className="col-span-3 mx-2 text-s py-4">{mission.details}</p>
             </div>
+            </Link>
             :
-            <div className="container grid grid-cols-12 bg-gray-200 justify-center text-center items-center px-32">
+            <Link to={`${url}/LaunchDetail/${mission.flight_number}`}>
+            <div className="container grid grid-cols-12 bg-gray-200 justify-center text-center items-center px-32 cursor-pointer hover:bg-gray-300">
               <p className="col-span-3 mx-2 text-s py-4">{mission.mission_name}</p>
               <p className="col-span-3 mx-2 text-s py-4">{mission.launch_year}</p>
               <p className="col-span-3 mx-2 text-s py-4">{mission.launch_success?<p className="text-green-600">Success</p>:<p className="text-red-600">Fail</p>}</p>
               <p className="col-span-3 mx-2 text-s py-4">{mission.details}</p>
             </div>
+            </Link>
             
           }
           </>
