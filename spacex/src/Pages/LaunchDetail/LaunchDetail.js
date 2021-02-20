@@ -68,7 +68,7 @@ function LaunchDetail (){
                       <p>{flight.launch_site.site_name_long}</p>
                       <p className="text-yellow-400 mt-2">Launch Success</p>
                       {flight.launch_success?<p className="text-green-400">Success</p>:<p className="text-red-400">Fail</p>}
-                      <Link to={`/Rocket/RocketDetail/${flight.rocket.rocket_id}`} className="flex flex-col">
+                      <Link to={`/Rocket/RocketDetail/${flight.rocket.rocket_id}`} className="flex flex-col mt-4">
                         <button className="border-2 border-yellow-400 hover:bg-yellow-400 hover:text-black self-center py-2 px-4 cursor-pointer">Rocket Detail -{'>'}</button>
                       </Link>
                       
