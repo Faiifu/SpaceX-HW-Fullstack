@@ -5,7 +5,6 @@ import {
   Link
 } from "react-router-dom";
 
-
 function Home() {
     const [info, setInfo] = useState([]);
     const [rockets, setRockets] = useState([]);
@@ -26,9 +25,16 @@ function Home() {
     [],
     );
     return (
+      <>
+      {rockets.length === 0
+      ?<></>
+      :<>
       <div className="bg-home min-h-screen min-w-full">
         <div className=" text-center absolute flex flex-col items-center justify-center min-h-screen min-w-full">
-        <h1 className="text-white text-8xl">SPACEX</h1>
+        <div className="flex">
+          <h1 className="text-white text-8xl">SPACE</h1>
+          <h1 className="x text-8xl">X</h1>
+        </div>
         <p className="text-white pt-5">Elon Musk founder | 2002 founded | 7000 employees<br></br>
 3 vehicles | 3 launch sites | 1 test sites </p>
         </div>
@@ -38,22 +44,28 @@ function Home() {
         <div className="section-2">
           <div className="h-screen">
             <h1 className="text-white pt-5 text-2xl text-center">ROCKET</h1>
-              <div className="grid grid-cols-12 gap-5 h-80">
+              <div className="grid grid-cols-12 gap-2 h-72">
                 <div className="col-span-2"></div>
-                {/* <img src={rockets[0].flickr_images[0]}> */}
-                  <div className="w-full bg-red-200 mt-5 col-span-2">1</div>
-                {/* </img> */}
-                <div className="w-full bg-red-200 mt-5 col-span-2">2</div>
-                <div className="w-full bg-red-200 mt-5 col-span-2">3</div>
-                <div className="w-full bg-red-200 mt-5 col-span-2">4</div>
+                  <div className="w-full bg-red-200 mt-5 col-span-2">
+                    <img src={rockets[0].flickr_images[0]} className="w-full h-full hover:bg-gray-400"></img>
+                  </div>
+                <div className="w-full bg-red-200 mt-5 col-span-2">
+                  <img src={rockets[1].flickr_images[2]} className="w-full h-full"></img>
+                </div>
+                <div className="w-full bg-red-200 mt-5 col-span-2">
+                  <img src={rockets[2].flickr_images[1]} className="w-full h-full"></img>
+                </div>
+                <div className="w-full bg-red-200 mt-5 col-span-2">
+                <img src={rockets[3].flickr_images[1]} className="w-full h-full"></img>
+                </div>
               </div>
               <div className="divide-y divide-gray-400">
-                <h1 className="more-detail-text text-white text-center mt-5 mb-3">more detail>></h1>
+                <h1 className="more-detail-text text-center mt-5 mb-3">SEE MORE >></h1>
                 <div></div>
               </div>
               <div className="section-3 h-80 w-full flex justify-center items-center">
                 <div className="w-2/5 text-center">
-                  <h1 className="text-white text-3xl">SpaceX</h1>
+                  <h1 className="x text-3xl">SpaceX</h1>
                   <br></br>
                   <p className="text-white">{info.summary}</p>
                 </div>
@@ -64,8 +76,11 @@ function Home() {
               </div>
             </div>   
           </div>
+          <div className="bg-black w-full h-4/5">
+            <img src={'/image-footer2.png'} className="image-footer w-5/12"></img>
+          </div>
           <footer className="section-3">
-            <div className="w-full h-3/4 mt-5">
+            <div className="w-full h-3/4">
               <div className="flex flex-row justify-center">
                 <img src={'/flickr.png'} className="w-5 pt-5 mx-5"></img>
                 <img src={'/twitter.png'} className="w-5 pt-5 mx-5"></img>
@@ -77,6 +92,8 @@ function Home() {
             </div>
           </footer>
         </div>
+        </>}
+      </>
     );
   }
 

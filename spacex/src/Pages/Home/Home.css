@@ -1,7 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&display=swap');
+
 :root {
     --background1a : black;
     --background2a : #EEEEEE;
     --color1a : #FFC300;
+    --font-family: 'Kanit';
+}
+
+body {
+    font-family: 'Kanit';
 }
 
 .bg-home {
@@ -12,8 +19,12 @@
     height: 92vh;
 }
 
+.more-detail-text,
+.x {
+    color: var(--color1a);
+}
+
 footer {
     background-color: var(--background2a);
     height: 17vh;
 }
-
