@@ -13,6 +13,7 @@ import RocketDetail from "./Pages/RocketDetail/RocketDetail"
 import LaunchDetail from './Pages/LaunchDetail/LaunchDetail'
 
 import Nav from "./components/nav/Nav"
+import Footer from "./components/footer/Footer"
 
 import './App.css';
 
@@ -39,6 +40,7 @@ export default function BasicExample() {
             <Launch />
           </Route>
         </Switch>
+        <Footer></Footer>
       </div>
     </Router>
   );
