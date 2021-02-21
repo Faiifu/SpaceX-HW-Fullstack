@@ -26,12 +26,12 @@ function RocketDetail(){
     return(
         <div>
             <div className="bg-black">
-                <div className="mx-16  text-2xl">
-                <Link to="/Rocket"><span className="flex flex-row  cursor-pointer w-16 pt-16 text-white"><img src="/left-arrow.svg" className="mx-4"></img><span>Back</span></span></Link>
+                <div className="mx-16">
+                <Link to="/Rocket"><span className="flex flex-row cursor-pointer pt-20 text-white"><img src="/left-arrow.png" className="w-8 h-4 mx-3 mt-1"></img><span>back</span></span></Link>
                 </div>
                 <div className="container flex flex-col items-center justify-center justify-items-center h-screen">
-                    <img className="m-4 h-3/4 w-2/3 " src={rocketInfo.flickr_images}></img>
-                    <p className="m-4 text-5xl ">{rocketInfo.rocket_name}</p>
+                    <img className="mb-6 -m-16 h-3/4 w-2/3 " src={rocketInfo.flickr_images}></img>
+                    <p className="m-4 text-5xl text-white">{rocketInfo.rocket_name}</p>
                 </div>
                 {rocketInfo.height &&
                 <div className="flex flex-row justify-center">

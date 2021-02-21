@@ -31,7 +31,7 @@ function Rocket() {
       ?<></>
       :<>
       <div className="bg-black h-full">
-        <h1 className="underline text-white text-5xl text-center py-8">ROCKETS</h1>
+        <h1 className="underline text-white text-5xl text-center py-5 pt-20">ROCKETS</h1>
         <div className="pic-row1">
           <div className="w-full flex justify-center">
             <div className="w-3/4 h-4/6 md:mt-9">
@@ -48,16 +48,11 @@ function Rocket() {
                     </div>
                   </div>
                   <img src={rockets[0].flickr_images[0]} className="w-full h-full"></img>
-                  {/* <div className="see-more w-1/3 h-3/6 absolute flex justify-center">
-                    <div className="self-center">
-                      <h1 className="text-white">SEE MORE</h1>
-                    </div>
-                  </div> */}
                 </div>
                 </Link>
 
                 <Link to={`${url}/RocketDetail/${rockets[1].rocket_id}`}>
-                <div className="falcon9 w-full flex justify-center items-center">
+                <div className="falcon9 w-full h-full flex justify-center items-center">
                   <div className="w-1/3 h-3/6 absolute">
                     <div>
                       <h1 className="text-white">rocket</h1>
@@ -96,7 +91,7 @@ function Rocket() {
                 </Link>
 
                 <Link to={`${url}/RocketDetail/${rockets[3].rocket_id}`}>
-                <div className="starship w-full flex justify-center items-center">
+                <div className="starship w-full h-full flex justify-center items-center">
                   <div className="w-1/3 h-80 absolute">
                     <div>
                       <h1 className="text-white">rocket</h1>
