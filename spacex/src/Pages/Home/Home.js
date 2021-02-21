@@ -39,7 +39,7 @@ function Home() {
 3 vehicles | 3 launch sites | 1 test sites </p>
         </div>
         <div className="bg-image">
-          <img src={'/image-main.png'} className="img-main bg-cover min-w-full"></img>
+          <img src={'/image-main.png'} className="img-main bg-cover min-w-full min-h-screen"></img>
         </div>
         <div className="section-2">
           <div className="h-screen">
@@ -60,7 +60,7 @@ function Home() {
                 </div>
               </div>
               <div className="divide-y divide-gray-400">
-                <h1 className="more-detail-text text-center mt-5 mb-3">SEE MORE >></h1>
+                <Link to="/Rocket"><h1 className="more-detail-text text-center mt-5 mb-3">SEE MORE >></h1></Link>
                 <div></div>
               </div>
               <div className="section-3 h-80 w-full flex justify-center items-center">
