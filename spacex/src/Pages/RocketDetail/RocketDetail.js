@@ -25,9 +25,9 @@ function RocketDetail(){
 
     return(
         <div>
-            <div>
-                <div className="mx-16 mt-4 text-2xl">
-                <Link to="/Rocket"><span className="flex flex-row  cursor-pointer w-16 "><img src="/left-arrow.svg" className="mx-4"></img><span>Back</span></span></Link>
+            <div className="bg-black">
+                <div className="mx-16  text-2xl">
+                <Link to="/Rocket"><span className="flex flex-row  cursor-pointer w-16 pt-16 text-white"><img src="/left-arrow.svg" className="mx-4"></img><span>Back</span></span></Link>
                 </div>
                 <div className="container flex flex-col items-center justify-center justify-items-center h-screen">
                     <img className="m-4 h-3/4 w-2/3 " src={rocketInfo.flickr_images}></img>
@@ -37,18 +37,21 @@ function RocketDetail(){
                 <div className="flex flex-row justify-center">
                 <div className="mx-28 text-xl pb-12">
                     <p className="text-2xl text-yellow-500">Height</p>
-                    <p className="pt-2">{rocketInfo.height.meters} meters. {rocketInfo.height.feet} feet</p>
+                    <p className="pt-2 text-white">{rocketInfo.height.meters} meters. {rocketInfo.height.feet} feet</p>
                 </div>
                 <div className="mx-28 text-xl pb-12">
                     <p className="text-2xl text-yellow-500">Diameter</p>
-                    <p className="pt-2">{rocketInfo.diameter.meters} meters. {rocketInfo.diameter.feet} feet</p>
+                    <p className="pt-2 text-white">{rocketInfo.diameter.meters} meters. {rocketInfo.diameter.feet} feet</p>
                 </div>
                 <div className="mx-28 text-xl pb-12">
                     <p className="text-2xl text-yellow-500">Mass</p>
-                    <p className="pt-2">{rocketInfo.mass.kg} kg. {rocketInfo.mass.lb} lb.</p>
+                    <p className="pt-2 text-white">{rocketInfo.mass.kg} kg. {rocketInfo.mass.lb} lb.</p>
                 </div>
             </div>
                 }
+            <div className="px-52">
+                <hr/>
+            </div>
             </div>
             <div className="bg-black px-40">
                 <div className="text-white py-8 px-16 inline-block">

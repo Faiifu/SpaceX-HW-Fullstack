@@ -12,7 +12,7 @@ function Nav() {
     return (
       <div>
         <div id="bg-home" className="text-white">
-          <div className="grid grid-cols-12 items-center">
+          <div className="grid grid-cols-12 items-center ">
             <img className="md:col-span-3 col-span-3 ml-12 cursor-pointer w-2/5" src="/SpaceX_Logo.png"></img>
               <div className="md:col-span-9 col-span-9 flex justify-end pr-10">
                 <NavLink exact to="/" activeStyle={{fontWeight: "bold", color: "#FFC300"}}>

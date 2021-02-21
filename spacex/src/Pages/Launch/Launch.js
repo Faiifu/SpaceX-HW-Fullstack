@@ -87,11 +87,10 @@ function Launch() {
         </div>
         {launches.map((mission)=>(
           <>
-          {count %2 == 0
+          {mission.flight_number %2 == 0
             ?
             
             <Link to={`${url}/LaunchDetail/${mission.flight_number}`}>
-            {handleCounter}
             <div className="container grid grid-cols-12 bg-yellow-50 justify-center text-center items-center px-32 cursor-pointer hover:bg-yellow-100">
               <p className="col-span-3 mx-2 text-s py-4">{mission.launch_year}</p>
               <p className="col-span-3 mx-2 text-s py-4">{mission.mission_name}</p>
@@ -101,7 +100,6 @@ function Launch() {
             </Link>
             :
             <Link to={`${url}/LaunchDetail/${mission.flight_number}`}>
-              {handleCounter}
             <div className="container grid grid-cols-12 bg-gray-200 justify-center text-center items-center px-32 cursor-pointer hover:bg-gray-300">
               <p className="col-span-3 mx-2 text-s py-4">{mission.launch_year}</p>
               <p className="col-span-3 mx-2 text-s py-4">{mission.mission_name}</p>

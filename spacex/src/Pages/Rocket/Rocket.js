@@ -36,8 +36,7 @@ function Rocket() {
           <div className="w-full flex justify-center">
             <div className="w-3/4 h-4/6 md:mt-9">
               <div className="grid grid-cols-2 gap-3 h-full">
-                <Link to={`${url}/RocketDetail/${rockets.rocket_id}`}>
-                  <h1 className="text-white">{rockets.rocket_id}</h1>
+                <Link to={`${url}/RocketDetail/${rockets[0].rocket_id}`}>
                 <div className="falcon1 w-full flex justify-center items-center">
                   <div className="w-1/3 h-3/6 absolute">
                     <div>
