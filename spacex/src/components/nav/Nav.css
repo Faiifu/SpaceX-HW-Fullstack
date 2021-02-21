@@ -1,7 +1,4 @@
-img{
-    width:32px;
-}
-
 #bg-home {
-    background-color: black;
+    position: fixed;
+    z-index: 1;
 }
