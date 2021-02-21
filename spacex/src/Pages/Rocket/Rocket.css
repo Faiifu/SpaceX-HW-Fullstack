@@ -1,0 +1,14 @@
+.falcon1:hover,
+.falcon9:hover,
+.heavy:hover,
+.starship:hover {
+    opacity: 50%;
+}
+
+.see-more {
+    opacity: 0;
+}
+
+.see-more:hover {
+    opacity: 1;
+}

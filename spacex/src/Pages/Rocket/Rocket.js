@@ -7,7 +7,7 @@ import {
   useRouteMatch
 } from "react-router-dom";
 import RocketDetail from '../RocketDetail/RocketDetail';
-
+import './Rocket.css';
 
 function Rocket() {
   
@@ -25,58 +25,91 @@ function Rocket() {
     );
     let {path,url} = useRouteMatch()
     return (
-      <div>
-        <div className="py-8">
-          <h1 className="underline text-5xl text-center pt-0">ROCKETS</h1>
-          {rockets.map((rocket) => (
-            <>
-             { rocket.id %2 ==1
-             ?
-             <>
-             <div>
-              <div className="container mx-auto p-4 px-32">
-                <div className="grid grid-cols-12 items-center justify-center justify-items-center">
-                    <div className="bg-cover bg-center col-span-4 m-4">
-                        <img src={rocket.flickr_images[0]} className="w-72 h-72 rounded-full"></img>
+      <>
+      {rockets.length === 0
+      
+      ?<></>
+      :<>
+      <div className="bg-black h-full">
+        <h1 className="underline text-white text-5xl text-center py-8">ROCKETS</h1>
+        <div className="pic-row1">
+          <div className="w-full flex justify-center">
+            <div className="w-3/4 h-4/6 md:mt-9">
+              <div className="grid grid-cols-2 gap-3 h-full">
+                <Link to={`${url}/RocketDetail/${rockets.rocket_id}`}>
+                  <h1 className="text-white">{rockets.rocket_id}</h1>
+                <div className="falcon1 w-full flex justify-center items-center">
+                  <div className="w-1/3 h-3/6 absolute">
+                    <div>
+                      <h1 className="text-white">rocket</h1>
+                      <h1 className="text-4xl text-white md:mt-3">Falcon 1</h1>
                     </div>
-                    <div className="info col-span-8 m-4">
-                        <h2 className="text-xl font-bold">{rocket.rocket_name}</h2>
-                        <p>{rocket.description}</p>
-                      <div className="flex flex-row justify-end">
-                        <Link to={`${url}/RocketDetail/${rocket.rocket_id}`}><button className="border-2 p-2 hover:bg-gray-400">View details</button></Link>
-                      </div>  
+                    <div className="absolute bottom-0 right-0">
+                      <h1 className="text-white text-5xl">01</h1>
                     </div>
                   </div>
-              </div>
-             </div>
-             </>
-              :  
-              <>
-              <div className="bg-gray-900">
-                <div className="container mx-auto p-4 px-32">
-                  <div className="grid grid-cols-12 items-center justify-center justify-items-center">
-                    <div className="info col-span-8 m-4 text-white">
-                      <h2 className="text-xl font-bold">{rocket.rocket_name}</h2>
-                      <p>{rocket.description}</p>
+                  <img src={rockets[0].flickr_images[0]} className="w-full h-full"></img>
+                  {/* <div className="see-more w-1/3 h-3/6 absolute flex justify-center">
+                    <div className="self-center">
+                      <h1 className="text-white">SEE MORE</h1>
                     </div>
-                    <div className="bg-cover bg-center col-span-4 m-4">
-                      <img src={rocket.flickr_images[0]} className="w-72 h-72 rounded-full"></img>
+                  </div> */}
+                </div>
+                </Link>
+
+                <div className="falcon9 w-full flex justify-center items-center">
+                  <div className="w-1/3 h-3/6 absolute">
+                    <div>
+                      <h1 className="text-white">rocket</h1>
+                      <h1 className="text-4xl text-white md:mt-3">Falcon 9</h1>
                     </div>
-                    <div className="flex flex-row text-white">
-                      <Link to={`${url}/RocketDetail/${rocket.rocket_id}`}><button className="border-2 py-2 px-2 hover:bg-gray-400">View details</button></Link>
-                    </div>  
+                    <div className="absolute bottom-0 right-0">
+                      <h1 className="text-white text-5xl">02</h1>
+                    </div>
                   </div>
+                  <img src={rockets[1].flickr_images[2]} className="w-full h-full"></img>
                 </div>
               </div>
-              </>
-              }
-            </>
-          
-          ))}
+            </div>
+          </div>
         </div>
-        
+
+        <div className="pic-row2">
+          <div className="w-full flex justify-center">
+            <div className="w-3/4 h-4/6 md:mt-3 md:mb-10">
+              <div className="grid grid-cols-2 gap-3 h-full">
+                <div className="heavy w-full flex justify-center items-center">
+                  <div className="w-1/3 h-80 absolute">
+                    <div>
+                      <h1 className="text-white">rocket</h1>
+                      <h1 className="text-4xl text-white md:mt-3">Falcon Heavy</h1>
+                    </div>
+                    <div className="absolute bottom-0 right-0">
+                      <h1 className="text-white text-5xl">03</h1>
+                    </div>
+                  </div>
+                  <img src={rockets[2].flickr_images[1]} className="w-full h-full"></img>
+                </div>
+
+                <div className="starship w-full flex justify-center items-center">
+                  <div className="w-1/3 h-80 absolute">
+                    <div>
+                      <h1 className="text-white">rocket</h1>
+                      <h1 className="text-4xl text-white md:mt-3">Starship</h1>
+                    </div>
+                    <div className="absolute bottom-0 right-0">
+                      <h1 className="text-white text-5xl">04</h1>
+                    </div>
+                  </div>
+                  <img src={rockets[3].flickr_images[1]} className="w-full h-full"></img>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+      </>}
+      </>
     );
   }
-
-  export default Rocket;
+export default Rocket;
