@@ -50,9 +50,9 @@ function Home() {
                 </h1>
                 <div className="home-sum pb-20">
                   <p className="text-white p-10">{info.summary}</p>
-                  <a href="#!" className="xbtn">
+                  <Link to="/Rocket"><a href="#!" className="xbtn">
                     VIEW OUR ROCKETS
-                  </a>
+                  </a></Link>
                 </div>
               </div>
             </div>
