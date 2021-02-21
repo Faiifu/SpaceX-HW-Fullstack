@@ -38,10 +38,12 @@ function Launch() {
   let {path,url} = useRouteMatch()
     return (
       <div>
-        <div className="flex flex-col items-center justify-center justify-items-center h-64 bg-black px-32">
-          <h1 className="underline text-5xl text-white">Launches List</h1>
-          <div className="pt-16 text-m flex flex-row">
-              <div className="">
+        <div className="flex flex-col items-center justify-center justify-items-center h-64 bg-black">
+          <h1 className=" text-white text-5xl text-center py-5 pt-40 myTitle">Launches List</h1>
+        </div>
+        <div class="container mx-auto  py-5">
+        <div className=" text-m grid  grid-cols-1 md:grid-cols-3 gap-3">
+              <div className="text-center">
                 <select className="mx-8 cursor-pointer px-4 py-2" onChange={handleRocketNameChange} name="" id="" >
                   <option value="">Select Rocket</option>
                   <option value="Falcon 1">Falcon 1</option>
@@ -50,7 +52,7 @@ function Launch() {
                   <option value="Starship">Starship</option>
                 </select>
               </div>
-              <div className="border-solid">
+              <div className="border-solid text-center">
                 <select className="mx-8 cursor-pointer px-4 py-2"  onChange={handleLaunchYearChange} name="" id="" >
                   <option value="">Select Year</option>
                   <option value="2020">2020</option>
@@ -70,7 +72,7 @@ function Launch() {
                   <option value="2006">2006</option>
                 </select>
               </div>
-              <div className="border-solid">
+              <div className="border-solid text-center">
                 <select className="mx-8 cursor-pointer px-4 py-2" onChange={handleIsSuccessChange} name="" id="" >
                   <option value="">Select Launch success</option>
                   <option value="true">Success</option>
@@ -79,19 +81,22 @@ function Launch() {
               </div>
           </div>
         </div>
-        <div className="container grid grid-cols-12 bg-yellow-400 justify-center text-center px-32">
+        <div className="bg-yellow-400 ">
+        <div className=" mx-auto grid grid-cols-12 justify-center text-center">
           <p className="col-span-3 mx-2 text-xl py-4 text-white font-bold">Launch Year</p>
           <p className="col-span-3 mx-2 text-xl py-4 text-white font-bold">Name</p>
           <p className="col-span-3 mx-2 text-xl py-4 text-white font-bold">Description</p>
           <p className="col-span-3 mx-2 text-xl py-4 text-white font-bold">Success</p>
         </div>
+        </div>
+        <div className=" table-wrap">
         {launches.map((mission)=>(
           <>
           {mission.flight_number %2 == 0
             ?
             
             <Link to={`${url}/LaunchDetail/${mission.flight_number}`}>
-            <div className="container grid grid-cols-12 bg-yellow-50 justify-center text-center items-center px-32 cursor-pointer hover:bg-yellow-100">
+            <div className=" grid grid-cols-12 justify-center text-center items-center cursor-pointer">
               <p className="col-span-3 mx-2 text-s py-4">{mission.launch_year}</p>
               <p className="col-span-3 mx-2 text-s py-4">{mission.mission_name}</p>
               <p className="col-span-3 mx-2 text-s py-4">{mission.details}</p>
@@ -100,7 +105,7 @@ function Launch() {
             </Link>
             :
             <Link to={`${url}/LaunchDetail/${mission.flight_number}`}>
-            <div className="container grid grid-cols-12 bg-gray-200 justify-center text-center items-center px-32 cursor-pointer hover:bg-gray-300">
+            <div className=" grid grid-cols-12 justify-center text-center items-center cursor-pointer">
               <p className="col-span-3 mx-2 text-s py-4">{mission.launch_year}</p>
               <p className="col-span-3 mx-2 text-s py-4">{mission.mission_name}</p>
               <p className="col-span-3 mx-2 text-s py-4">{mission.details}</p>
@@ -111,7 +116,7 @@ function Launch() {
           }
           </>
         ))}
-        
+        </div>
       </div>
     );
   }

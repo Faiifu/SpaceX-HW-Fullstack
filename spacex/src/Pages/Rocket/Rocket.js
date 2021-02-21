@@ -31,19 +31,19 @@ function Rocket() {
       ?<></>
       :<>
       <div className="bg-black h-full">
-        <h1 className="underline text-white text-5xl text-center py-5 pt-20">ROCKETS</h1>
+        <h1 className=" text-white text-5xl text-center py-5 pt-40 myTitle">ROCKETS</h1>
         <div className="pic-row1">
           <div className="w-full flex justify-center">
-            <div className="w-3/4 h-4/6 md:mt-9">
-              <div className="grid grid-cols-2 gap-3 h-full">
+            <div className="container mx-auto px-4 mt-9">
+              <div className="grid  grid-cols-1 md:grid-cols-2 gap-3 h-full">
                 <Link to={`${url}/RocketDetail/${rockets[0].rocket_id}`}>
-                <div className="falcon1 w-full flex justify-center items-center">
-                  <div className="w-1/3 h-3/6 absolute">
-                    <div>
-                      <h1 className="text-white">rocket</h1>
+                <div className="relative rocket-card falcon1 w-full flex justify-center items-center">
+                  <div className="w-full h-full absolute">
+                    <div className="p-4">
+                      <h1 className="text-white">Rocket</h1>
                       <h1 className="text-4xl text-white md:mt-3">Falcon 1</h1>
                     </div>
-                    <div className="absolute bottom-0 right-0">
+                    <div className="p-4 absolute bottom-0 right-0">
                       <h1 className="text-white text-5xl">01</h1>
                     </div>
                   </div>
@@ -52,37 +52,28 @@ function Rocket() {
                 </Link>
 
                 <Link to={`${url}/RocketDetail/${rockets[1].rocket_id}`}>
-                <div className="falcon9 w-full h-full flex justify-center items-center">
-                  <div className="w-1/3 h-3/6 absolute">
-                    <div>
-                      <h1 className="text-white">rocket</h1>
+                <div className="relative rocket-card falcon9 w-full h-full flex justify-center items-center">
+                  <div className="w-full h-full absolute">
+                    <div className="p-4">
+                      <h1 className="text-white">Rocket</h1>
                       <h1 className="text-4xl text-white md:mt-3">Falcon 9</h1>
                     </div>
-                    <div className="absolute bottom-0 right-0">
+                    <div className="p-4 absolute bottom-0 right-0">
                       <h1 className="text-white text-5xl">02</h1>
                     </div>
                   </div>
                   <img src={rockets[1].flickr_images[2]} className="w-full h-full"></img>
                 </div>
                 </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="pic-row2">
-          <div className="w-full flex justify-center">
-            <div className="w-3/4 h-4/6 md:mt-3 md:mb-10">
-              <div className="grid grid-cols-2 gap-3 h-full">
 
                 <Link to={`${url}/RocketDetail/${rockets[2].rocket_id}`}>
-                <div className="heavy w-full flex justify-center items-center">
-                  <div className="w-1/3 h-80 absolute">
-                    <div>
-                      <h1 className="text-white">rocket</h1>
+                <div className="relative rocket-card heavy w-full flex justify-center items-center">
+                  <div className="w-full h-full absolute">
+                    <div className="p-4">
+                      <h1 className="text-white">Rocket</h1>
                       <h1 className="text-4xl text-white md:mt-3">Falcon Heavy</h1>
                     </div>
-                    <div className="absolute bottom-0 right-0">
+                    <div className="p-4 absolute bottom-0 right-0">
                       <h1 className="text-white text-5xl">03</h1>
                     </div>
                   </div>
@@ -91,24 +82,24 @@ function Rocket() {
                 </Link>
 
                 <Link to={`${url}/RocketDetail/${rockets[3].rocket_id}`}>
-                <div className="starship w-full h-full flex justify-center items-center">
-                  <div className="w-1/3 h-80 absolute">
-                    <div>
-                      <h1 className="text-white">rocket</h1>
+                <div className="relative rocket-card starship w-full h-full flex justify-center items-center">
+                  <div className="w-full h-full absolute">
+                    <div className="p-4">
+                      <h1 className="text-white">Rocket</h1>
                       <h1 className="text-4xl text-white md:mt-3">Starship</h1>
                     </div>
-                    <div className="absolute bottom-0 right-0">
+                    <div className="p-4 absolute bottom-0 right-0">
                       <h1 className="text-white text-5xl">04</h1>
                     </div>
                   </div>
                   <img src={rockets[3].flickr_images[1]} className="w-full h-full"></img>
                 </div>
                 </Link>
-
               </div>
             </div>
           </div>
         </div>
+        <div className="p-2"></div>
       </div>
       </>}
       </>

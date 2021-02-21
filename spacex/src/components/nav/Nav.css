@@ -1,4 +1,29 @@
 #bg-home {
     position: fixed;
     z-index: 1;
+    background-color: #0008;
+    animation: bghome 2s infinite;
+}
+@keyframes bghome{
+    from{box-shadow: 120vw 1px 0 #ffc300;}
+    to{box-shadow: -120vw 1px 0 #ffc300;}
+}
+.rocketDetailImg{
+    max-width: 600px;
+}.container{
+    max-width: 1200px !important;
+}
+
+.table-wrap>a:nth-child(even)>div{
+    background:#f9f9f9;
+}
+.table-wrap>a:nth-child(even)>div:hover{
+    background:#fff1c5;
+}
+.table-wrap>a:nth-child(odd)>div:hover{
+    background:#fff9e6;
+}
+
+iframe {
+    max-width: 100%;
 }

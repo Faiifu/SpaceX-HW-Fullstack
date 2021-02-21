@@ -1,14 +1,34 @@
-.falcon1:hover,
+/* .falcon1:hover,
 .falcon9:hover,
 .heavy:hover,
 .starship:hover {
     opacity: 50%;
-}
+} */
 
 .see-more {
     opacity: 0;
 }
 
 .see-more:hover {
+    opacity: 1;
+}
+
+.rocket-card::after {
+    content: "SEE MORE";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0009;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: bold;
+    opacity: 0;
+    transition: .3s;
+}
+.rocket-card:hover::after{
     opacity: 1;
 }

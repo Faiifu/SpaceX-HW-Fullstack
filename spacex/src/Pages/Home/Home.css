@@ -26,5 +26,72 @@ body {
 
 footer {
     background-color: var(--background2a);
-    height: 17vh;
+}
+.myTitle {
+    position: relative;
+}
+
+.myTitle::after {
+    content: "";
+    width: 100px;
+    height: 2px;
+    background: #ffc300;
+    position: absolute;
+    bottom: .2em;
+    left: calc(50% - 50px);
+}
+
+video.video-bg {
+    position: relative;
+    width: 100%;
+    opacity: .5;
+}
+.bg-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* padding-top: 66%; */
+}
+
+.home-feature {
+    position: absolute;
+    text-align: center;
+}
+.home-sum{
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+}
+.xbtn {
+    color: #ffc300;
+    display: inline-block;
+    margin: auto;
+    padding: .5em 1em;
+    border: 1px solid #ffc300;
+    transition: .2s;
+}
+
+.xbtn:hover {
+    background-color: #ffc300;
+    color: #000;
+}
+
+.section-2 {
+    background-attachment: fixed;
+    background-size: cover;
+}
+.section-2-inner{
+    width: 100%;
+    padding: 6em 0;
+}
+@media only screen and (max-width: 720px) {
+    video.video-bg {
+        position: relative;
+        width: 500vh;
+        opacity: .5;
+        max-width: none;
+        left: -20vw;
+    }
 }
