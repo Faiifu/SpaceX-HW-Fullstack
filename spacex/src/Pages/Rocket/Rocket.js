@@ -56,6 +56,7 @@ function Rocket() {
                 </div>
                 </Link>
 
+                <Link to={`${url}/RocketDetail/${rockets[1].rocket_id}`}>
                 <div className="falcon9 w-full flex justify-center items-center">
                   <div className="w-1/3 h-3/6 absolute">
                     <div>
@@ -68,6 +69,7 @@ function Rocket() {
                   </div>
                   <img src={rockets[1].flickr_images[2]} className="w-full h-full"></img>
                 </div>
+                </Link>
               </div>
             </div>
           </div>
@@ -77,6 +79,8 @@ function Rocket() {
           <div className="w-full flex justify-center">
             <div className="w-3/4 h-4/6 md:mt-3 md:mb-10">
               <div className="grid grid-cols-2 gap-3 h-full">
+
+                <Link to={`${url}/RocketDetail/${rockets[2].rocket_id}`}>
                 <div className="heavy w-full flex justify-center items-center">
                   <div className="w-1/3 h-80 absolute">
                     <div>
@@ -89,7 +93,9 @@ function Rocket() {
                   </div>
                   <img src={rockets[2].flickr_images[1]} className="w-full h-full"></img>
                 </div>
+                </Link>
 
+                <Link to={`${url}/RocketDetail/${rockets[3].rocket_id}`}>
                 <div className="starship w-full flex justify-center items-center">
                   <div className="w-1/3 h-80 absolute">
                     <div>
@@ -102,6 +108,8 @@ function Rocket() {
                   </div>
                   <img src={rockets[3].flickr_images[1]} className="w-full h-full"></img>
                 </div>
+                </Link>
+
               </div>
             </div>
           </div>
