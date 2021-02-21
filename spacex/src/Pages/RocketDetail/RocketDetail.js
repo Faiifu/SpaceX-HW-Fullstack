@@ -31,7 +31,7 @@ function RocketDetail(){
                 </div>
                 <div className="container flex flex-col items-center justify-center justify-items-center h-screen">
                     <img className="mb-6 -m-16 h-3/4 w-2/3 " src={rocketInfo.flickr_images}></img>
-                    <p className="m-4 text-5xl text-white">{rocketInfo.rocket_name}</p>
+                    <p className="text-5xl text-white">{rocketInfo.rocket_name}</p>
                 </div>
                 {rocketInfo.height &&
                 <div className="flex flex-row justify-center">

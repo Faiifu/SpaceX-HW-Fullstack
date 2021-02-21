@@ -32,10 +32,10 @@ function LaunchDetail (){
     },
   };
     return(
-        <div>
-            <div className="mx-16 mt-4 text-2xl">
-                <Link to="/Launch"><span className="flex flex-row  cursor-pointer w-16 "><img src="/left-arrow.svg" className="mx-4"></img><span>Back</span></span></Link>
-                </div>
+        <div className="bg-gray-200">
+            <div className="mx-16">
+              <Link to="/Launch"><span className="flex flex-row cursor-pointer pt-20"><img src="/left-arrow-black.png" className="w-8 h-4 mx-3 mt-1"></img><span>back</span></span></Link>
+            </div>
             <div className="flex flex-col items-center pt-6 pb-6">
                 {flight.links &&
                 <>
