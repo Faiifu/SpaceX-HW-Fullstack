@@ -38,7 +38,7 @@ function Launch() {
   let {path,url} = useRouteMatch()
     return (
       <div>
-        <div className="flex flex-col items-center justify-center justify-items-center h-64 bg-black">
+        <div className="flex flex-col items-center justify-center justify-items-center bg-black pb-20">
           <h1 className=" text-white text-5xl text-center py-5 pt-40 myTitle">Launches List</h1>
         </div>
         <div class="container mx-auto  py-5">
